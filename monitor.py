@@ -67,6 +67,8 @@ def motion_detection():
 
                 text = 'Occupied'
                 # text that appears when there is motion in video feed
+
+                cv2.imwrite("capture_" + str(frame_count) + ".png", frame)                
             else:
                 pass
 
@@ -96,6 +98,7 @@ def motion_detection():
 
         frame_count = frame_count+1
         ref_frame = greyscale_image
+        print(frame_count)
 
 if __name__=='__main__':    
     motion_detection()
